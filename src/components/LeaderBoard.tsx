@@ -7,7 +7,7 @@ interface LeaderboardProps {
   streamers: Streamer[];
 }
 
-const ITEM_HEIGHT = 60; // Height of each item
+const ITEM_HEIGHT = 60;
 
 const Leaderboard: React.FC<LeaderboardProps> = ({ streamers }) => {
   return (
@@ -28,7 +28,7 @@ const List = styled.div`
   width: 100%;
   max-width: 900px; 
   margin: 20px auto; 
-  background: #2d2d2d;
+  background: transparent;
   border-radius: 8px;
   overflow: hidden;
 `;

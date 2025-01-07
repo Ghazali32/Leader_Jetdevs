@@ -8,6 +8,7 @@ interface StreamerComponentProps {
 }
 
 const StreamerComponent: React.FC<StreamerComponentProps> = ({ streamer, rank }) => {
+  console.log(rank)
   return (
     <Item rank={rank}>
       <Content>
@@ -32,7 +33,7 @@ const Item = styled.div<{ rank: number }>`
   height: 60px;
   box-sizing: border-box; 
   border-bottom: 1px solid #dcdcdc;
-  background: ${({ rank }) => (rank === 1 ? '#4A69DD' : rank % 2 === 0 ? '#F0F3FC' : '#F9FAFE')};
+  background: ${({ rank  }) => (rank === 1 ? '#4A69DD' : rank % 2 === 0 ? '#F0F3FC' : '#F9FAFE')};
   color: ${({ rank }) => (rank === 1 ? '#ffffff' : '#000000')};
 
   &:hover {
@@ -46,7 +47,13 @@ const Content = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
+
 
 const Rank = styled.div<{ rank: number }>`
   width: 30px;
