@@ -7,6 +7,7 @@ import { generateInitialData } from './utils/data';
 const App = () => {
   const [streamers, setStreamers] = useState<Streamer[]>(generateInitialData());
 
+  //here we are shuffling the streamers score by randomly adding a value between -2500 and 2500 to each streamer's score
   useEffect(() => {
     const interval = setInterval(() => {
       setStreamers((prevStreamers) => 

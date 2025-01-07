@@ -7,7 +7,7 @@ interface StreamerComponentProps {
   rank: number;
 }
 
-const StreamerComponent: React.FC<StreamerComponentProps> = ({ streamer, rank }) => {
+const StreamerRow: React.FC<StreamerComponentProps> = ({ streamer, rank }) => {
   console.log(rank)
   return (
     <Item rank={rank}>
@@ -23,7 +23,7 @@ const StreamerComponent: React.FC<StreamerComponentProps> = ({ streamer, rank })
   );
 };
 
-export default StreamerComponent;
+export default StreamerRow;
 
 const Item = styled.div<{ rank: number }>`
   display: flex;

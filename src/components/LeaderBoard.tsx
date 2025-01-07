@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Streamer } from '../types';
-import StreamerComponent from './StreamerComponent';
+import StreamerRow from './StreamerRow';
 
 interface LeaderboardProps {
   streamers: Streamer[];
@@ -14,7 +14,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({ streamers }) => {
     <List style={{ height: `${streamers.length * ITEM_HEIGHT}px` }}>
       {streamers.map((streamer, index) => (
         <StreamerWrapper key={streamer.userID} style={{ transform: `translateY(${index * ITEM_HEIGHT}px)` }}>
-          <StreamerComponent streamer={streamer} rank={index + 1} />
+          <StreamerRow streamer={streamer} rank={index + 1} />
         </StreamerWrapper>
       ))}
     </List>
