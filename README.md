@@ -9,7 +9,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/nazish-ttr/leaderboard_jetdevs.git
+    git clone https://github.com/Ghazali32/Leader_Jetdevs.git
     cd leaderboard_jetdevs
     ```
 
@@ -37,6 +37,7 @@ The application should now be running on `http://localhost:3000`.
     - `Leaderboard.tsx`: Component that displays the leaderboard.
     - `StreamerComponent.tsx`: Component that displays individual streamer information.
   - `types/`: Contains TypeScript types.
+  - `utils/`: Test Data.
 - `public/`: Contains public assets and the main `index.html`.
 
 
